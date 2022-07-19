@@ -1,0 +1,53 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe 建置使用中檔案",
+			"command": "C:\\msys64\\mingw64\\bin\\gcc.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g3",
+				"-Wall",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "編譯器: \"C:\\msys64\\mingw64\\bin\\gcc.exe\""
+		},
+		{
+			"type": "shell",
+			"label": "Run C Program: gcc.exe",
+			"command": "C:\\msys64\\mingw64\\bin\\gcc.exe -g3 -Wall \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" ; \"${fileDirname}\\${fileBasenameNoExtension}\"",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "編譯器: \"C:\\msys64\\mingw64\\bin\\gcc.exe\""
+		},
+		{
+			"type": "shell",
+			"label": "Run C++ Program: g++.exe",
+			"command": "C:\\msys64\\mingw64\\bin\\g++.exe -g3 -Wall \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" ; \"${fileDirname}\\${fileBasenameNoExtension}\"",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "編譯器: \"C:\\msys64\\mingw64\\bin\\g++.exe\""
+		}
+	]
+}
